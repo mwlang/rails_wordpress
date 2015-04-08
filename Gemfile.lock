@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     rails-wordpress (0.0.1)
-      rails (~> 4.2.1)
+      rails (~> 4.2)
 
 GEM
   remote: https://rubygems.org/
@@ -180,11 +180,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  database_cleaner
-  factory_girl (~> 4.5.0)
-  guard-rails
-  guard-rspec
-  mysql2
+  database_cleaner (~> 1.4)
+  factory_girl (~> 4.5)
+  guard-rails (~> 0.7)
+  guard-rspec (~> 4.5)
+  mysql2 (~> 0.3)
   rails-wordpress!
-  rspec-its
-  rspec-rails
+  rspec-its (~> 1.2)
+  rspec-rails (~> 3.2)
