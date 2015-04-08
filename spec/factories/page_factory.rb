@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :page, :class => WordPress::Page do
+  factory :page, :class => Wordpress::Page do
     post_title 'Page'
     post_content "Coming Soon!"
     post_excerpt ""

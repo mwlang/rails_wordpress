@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :wp_post, class: WordPress::WpPost do
+  factory :wp_post, class: Wordpress::WpPost do
     post_title 'Test'
     post_content 'CONTENT'
     post_excerpt "EXCERPT"

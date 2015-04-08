@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :attachment, class: WordPress::Attachment do 
+  factory :attachment, class: Wordpress::Attachment do 
     post_title 'Attachment'
     post_content ""
     post_excerpt ""

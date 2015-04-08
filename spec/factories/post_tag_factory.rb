@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :tag, class: WordPress::PostTag do
+  factory :tag, class: Wordpress::PostTag do
     transient do
       name "NAME"
     end

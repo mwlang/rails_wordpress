@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :term, class: WordPress::Term do
+  factory :term, class: Wordpress::Term do
     name "Foobar"
   end
 end

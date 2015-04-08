@@ -1,2 +1,2 @@
-WordPress::Engine.routes.draw do
+Wordpress::Engine.routes.draw do
 end

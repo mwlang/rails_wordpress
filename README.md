@@ -1,25 +1,25 @@
-# Rails WordPress
+# Rails Wordpress
 
-This is a WordPress Engine for Rails 4.x.  It provides ActiveRecord models that directly utilize WordPress' tables.  The model classes have been named for the most part according to typical Rails naming convention and model the actual underlying WordPress concepts.  For example, wp_posts contains posts, pages, attachments, revisions, links, and many other meta types.  This engine models the most common ones: WordPress::Post, WordPress::Page, WordPress::Revision, etc..
+This is a Wordpress Engine for Rails 4.x.  It provides ActiveRecord models that directly utilize Wordpress' tables.  The model classes have been named for the most part according to typical Rails naming convention and model the actual underlying Wordpress concepts.  For example, wp_posts contains posts, pages, attachments, revisions, links, and many other meta types.  This engine models the most common ones: Wordpress::Post, Wordpress::Page, Wordpress::Revision, etc..
 
 ### Project Status
 
-The current state of this project is ALPHA and not everything is modeled, but there is solid implementation for posts, revisions, categories, and tags that will allow you to rapidly build a Rails-based blog or view on an active WordPress site that you have access to the database.  
+The current state of this project is ALPHA and not everything is modeled, but there is solid implementation for posts, revisions, categories, and tags that will allow you to rapidly build a Rails-based blog or view on an active Wordpress site that you have access to the database.  
 
-This engine is a direct tie-in to the WordPress database with functionality reverse-engineered via ActiveRecord models.  
+This engine is a direct tie-in to the Wordpress database with functionality reverse-engineered via ActiveRecord models.  
 
-This engine (presently) does *not* provide API/RESTFul connections to a WordPress site nor Rails Views and View Helpers.
+This engine (presently) does *not* provide API/RESTFul connections to a Wordpress site nor Rails Views and View Helpers.
 
 This engine is currently in production use and being utilized in my blog at http://codeconnoisseur.org
 
-This Engine was developed and tested with Rails 4.2, but should work for all 4.x and up.  Because WordPress is MySQL based, this engine expects MySQL as a dependency.  If you have converted your WordPress to another DBMS and adapt this gem accordingly, then Pull Requests complete with unit tests are welcome!
+This Engine was developed and tested with Rails 4.2, but should work for all 4.x and up.  Because Wordpress is MySQL based, this engine expects MySQL as a dependency.  If you have converted your Wordpress to another DBMS and adapt this gem accordingly, then Pull Requests complete with unit tests are welcome!
 
 ## How to Use
 
 In your Rails Gemfile add the gem: 
 
 ```
-gem 'rails-wordpress'
+gem 'rails_wordpress'
 ```
 
 and then: 
@@ -32,21 +32,21 @@ bundle install
 
 The following ActiveRecord models are available via this Engine:
 
-### WordPress::Post
+### Wordpress::Post
 
-This model is the main model you're probably interested in.  It models WordPress Posts, Revisions, Tags, and Categories  WordPress has a somewhat complicated Post + Revision system.  I did not attempt to verify all functionality implemented by its Revision system -- however, I did get the logic working well enough for my needs.  Basically, tags, categories, etc. are assumed to be linked against the original wp_posts::post_type => 'post' and when multiple revisions on a post exists, any edits to the tags and categories are saved against the first post's record, not the latest revision record that is created.  From what I could tell, all of my posts were correctly rendered on my personal blog with this approach.
+This model is the main model you're probably interested in.  It models Wordpress Posts, Revisions, Tags, and Categories  Wordpress has a somewhat complicated Post + Revision system.  I did not attempt to verify all functionality implemented by its Revision system -- however, I did get the logic working well enough for my needs.  Basically, tags, categories, etc. are assumed to be linked against the original wp_posts::post_type => 'post' and when multiple revisions on a post exists, any edits to the tags and categories are saved against the first post's record, not the latest revision record that is created.  From what I could tell, all of my posts were correctly rendered on my personal blog with this approach.
 
-As it is, you can emulate WordPress' revision system succinctly with the following controller examples:
+As it is, you can emulate Wordpress' revision system succinctly with the following controller examples:
 
 ``` ruby
 def new
-  @post = WordPress::Post.new
+  @post = Wordpress::Post.new
 end
 
 # Simply call #save on the newly created post
 def create
   begin
-    @post = WordPress::Post.new(post_params)
+    @post = Wordpress::Post.new(post_params)
     @post.save!
     redirect_to post_path(@post), notice: 'Post was successfully created.'
   rescue
@@ -56,7 +56,7 @@ end
 
 # This is an example of how to "revert" to an earlier version of the post
 def revert
-  revision = WordPress::Revision.find(params[:id])
+  revision = Wordpress::Revision.find(params[:id])
   revision.update_attribute(:post_modified, Time.now)
   redirect_to edit_post_path(revision.parent)
 end
@@ -72,7 +72,7 @@ def update
 end
 
 def set_post
-  @post = WordPress::Post.find(params[:id])
+  @post = Wordpress::Post.find(params[:id])
   @title = @post.title
 end
 
@@ -81,31 +81,31 @@ def post_params
 end
 ```
 
-The following scopes are available on WordPress::Post
+The following scopes are available on Wordpress::Post
 
-* WordPress::Post.recent => The first 10 posts ordered by date modified for the post
-* WordPress::Post.recent(N) => The first N posts ordered by date modified for the post
-* WordPress::Post.published => All posts in published status
-* WordPress::Post.descending => Orders posts by post_modified date in descending order
+* Wordpress::Post.recent => The first 10 posts ordered by date modified for the post
+* Wordpress::Post.recent(N) => The first N posts ordered by date modified for the post
+* Wordpress::Post.published => All posts in published status
+* Wordpress::Post.descending => Orders posts by post_modified date in descending order
 
 An example showing last 5 posts published:
 
 ``` ruby
-@recent_posts = WordPress::Post.published.recent(5)
+@recent_posts = Wordpress::Post.published.recent(5)
 ```
 
-The following are also available on a given post (@post = WordPress::Post.first):
+The following are also available on a given post (@post = Wordpress::Post.first):
 
-* @post.first_revision => The first (a.k.a. parent) record for this post.  Relevant only to WordPress::Revision in this case
-* @post.latest_revision => The most recently saved revision of the post (may be either self or a WordPress::Revision instance)
-* @post.author => instance of WordPress::User and is the person that authored the post
+* @post.first_revision => The first (a.k.a. parent) record for this post.  Relevant only to Wordpress::Revision in this case
+* @post.latest_revision => The most recently saved revision of the post (may be either self or a Wordpress::Revision instance)
+* @post.author => instance of Wordpress::User and is the person that authored the post
 * @post.created_at => alias of the @post.first_revision.post_date
-* @post.categories => a collection of WordPress::Category
+* @post.categories => a collection of Wordpress::Category
 * @post.category_names => an array of category names
-* @post.tags => a collection of WordPress::PostTag
+* @post.tags => a collection of Wordpress::PostTag
 * @post.tag_names => an array of tag names
 
-Remember that WordPress::Revision often contains newer data than WordPress::Post because of WordPress' way of maintaining revisions.  When rendering your views, use these properties to ensure latest data is displayed:
+Remember that Wordpress::Revision often contains newer data than Wordpress::Post because of Wordpress' way of maintaining revisions.  When rendering your views, use these properties to ensure latest data is displayed:
 
 * @post.content => self.latest_revision.post_content or self.post_content
 * @post.excerpt => self.latest_revision.post_excerpt or self.post_excerpt
@@ -115,21 +115,23 @@ Remember that WordPress::Revision often contains newer data than WordPress::Post
 * @post.post_tags => first_revision.tags
 * @post.post_categories => first_revision.categories
 
+The above will work seamlessly with either a Wordpress::Post or Wordpress::Revision instance.  
+
 When you want to edit a Post, you'll likely want to edit against the latest revision rather than the first revision. You can do one of two strategies:
 
-1. Pass the original Post (@post.first_revision) to the form_for helper, but populate using form_tag helpers from the @post.latest_revision (or whichever revision you opt to load).  In the controller, @post = WordPress::Post.find(params[:id]) followed by @post.new_revision(post_params).save
-1. Pass the latest Revision (@revision or @post.last_revision) to the form_for helper.  In the controller @revision = WordPress::Revision.find(params[:id]) followed by @revision.new_revision(post_params).save
+1. Pass the original Post (@post.first_revision) to the form_for helper, but populate using form_tag helpers from the @post.latest_revision (or whichever revision you opt to load).  In the controller, @post = Wordpress::Post.find(params[:id]) followed by @post.new_revision(post_params).save
+1. Pass the latest Revision (@revision or @post.last_revision) to the form_for helper.  In the controller @revision = Wordpress::Revision.find(params[:id]) followed by @revision.new_revision(post_params).save
 
 ### Assigning Tags
 
 Tags can be assigned to a post by setting up your form with post_tags field that contains the tags in comma delimited format.  I had good success using the [Tagit Gem](https://rubygems.org/gems/tagit) along with permitting the parameter per the above Controller example.
 
-WordPress::Post#post_tags= can take either a comma delimited list of tags or an array of strings, each item being a tag's name.
+Wordpress::Post#post_tags= can take either a comma delimited list of tags or an array of strings, each item being a tag's name.
 
 Some examples for tags:
 
 ``` ruby
-post = WordPress::Post.published.first
+post = Wordpress::Post.published.first
 post.tag_names # => ["Ruby Language", "Rails"]
 post.post_tags = "Ruby,Rails,Rails 4" # => Creates the new "Rails 4" tag and associates to the post record.
 
@@ -140,9 +142,9 @@ post.new_revision(:post_tags => ["Foobar"]).save!
 
 ### Assigning Categories
 
-Categories can be assigned to a post by setting up your form with post_categories[].  I found it better to set up checkbox fields with the WordPress::Category#id than with WordPress::Category#name as Categories are hierarchically arranged and I had some categories with the same name.
+Categories can be assigned to a post by setting up your form with post_categories[].  I found it better to set up checkbox fields with the Wordpress::Category#id than with Wordpress::Category#name as Categories are hierarchically arranged and I had some categories with the same name.
 
-WordPress::Post#post_categories= can take any of the following:
+Wordpress::Post#post_categories= can take any of the following:
 
 * A comma separated string representing a list of category names
 * A comma separated string representing a list of category ids
@@ -152,14 +154,14 @@ WordPress::Post#post_categories= can take any of the following:
 Some examples for categories:
 
 ``` ruby
-foobar_category = WordPress::Category.find_or_create("Foobar") # a top-level category
-sub_category = WordPress::Category.find_or_create("Foo", foobar_category) # A sub-category of "Foobar"
+foobar_category = Wordpress::Category.find_or_create("Foobar") # a top-level category
+sub_category = Wordpress::Category.find_or_create("Foo", foobar_category) # A sub-category of "Foobar"
 
 post.categories << foobar_category # assigns the "Foobar" category to the post
 post.post_categories = [foobar_category.id, sub_category.id] # assigns "Foobar" and "Foo" categories to the post.
 ```
 
-The presence of Revisions complicates checking if a post belongs to specific categories.  If you are holding an instance of a WordPress::Revision instead of WordPress::Post, then @post.categories.include?(some_category) will fail because the relationship is maintained off the original WordPress::Post record. To check if a post is in a category, use has_category? as follows:
+The presence of Revisions complicates checking if a post belongs to specific categories.  If you are holding an instance of a Wordpress::Revision instead of Wordpress::Post, then @post.categories.include?(some_category) will fail because the relationship is maintained off the original Wordpress::Post record. To check if a post is in a category, use has_category? as follows:
 
 ``` ruby
 # continuing above examples...
@@ -174,36 +176,36 @@ new_revision.category_names # => "Foobar, Foo"
 new_revision.has_category?("Foo") # => true
 ```
 
-### WordPress::Page
+### Wordpress::Page
 
-This model is functionally similar to the WordPress::Post model, but for WordPress Pages where wp_posts::post_type => 'page'
+This model is functionally similar to the Wordpress::Post model, but for Wordpress Pages where wp_posts::post_type => 'page'
 
-### WordPress:Category
+### Wordpress:Category
 
-This model represents a hierarchical organization of categories and is an abstraction of WordPress' complicated mess of wp_term_taxonomy, wp_terms, and ultimately linked to wp_posts through wp_term_relationships.  Categories are distinguished on the wp_term_taxonomy::taxonomy field containing "category" for it's field value.
+This model represents a hierarchical organization of categories and is an abstraction of Wordpress' complicated mess of wp_term_taxonomy, wp_terms, and ultimately linked to wp_posts through wp_term_relationships.  Categories are distinguished on the wp_term_taxonomy::taxonomy field containing "category" for it's field value.
 
-Simply put, to get a category use WordPress::Category.  This is also what's returned for a given post's #categories association which a has_many :through :relationships association.
+Simply put, to get a category use Wordpress::Category.  This is also what's returned for a given post's #categories association which a has_many :through :relationships association.
 
-The WordPress::Category model has two class-level convenience methods:
+The Wordpress::Category model has two class-level convenience methods:
 
-WordPress::Category#cloud returns a hash of the categories and a bit of math to calculate size/importance of the category (basically number of times a category is assigned to a post relative to number of other category assignments).  For example:
+Wordpress::Category#cloud returns a hash of the categories and a bit of math to calculate size/importance of the category (basically number of times a category is assigned to a post relative to number of other category assignments).  For example:
 
 ``` ruby
-WordPress::Category.cloud 
+Wordpress::Category.cloud 
         # => [{:category=>
-        #    #<WordPress::Category:0x007ff349959108
+        #    #<Wordpress::Category:0x007ff349959108
         #     term_taxonomy_id: 75,
         #     term_id: 70,
         #     count: 1>,
         #   :size=>1.0240963855421688},
         #  {:category=>
-        #    #<WordPress::Category:0x007ff349958780
+        #    #<Wordpress::Category:0x007ff349958780
         #     term_taxonomy_id: 76,
         #     term_id: 71,
         #     count: 3>,
         #   :size=>1.072289156626506},
         #  {:category=>
-        #    #<WordPress::Category:0x007ff349969288
+        #    #<Wordpress::Category:0x007ff349969288
         #     term_taxonomy_id: 5,
         #     term_id: 5,
         #     count: 1>,
@@ -217,16 +219,16 @@ An HAML example for rendering the Category cloud:
 
 ``` haml
 %h2 Categories
-- WordPress::Category.cloud.each do |t| 
+- Wordpress::Category.cloud.each do |t| 
   = link_to t[:category].name, category_path(t[:category]), style: "font-size: #{t[:size]}em" 
   %br
 ```
 
-`WordPress::Category#find_or_create category_name, parent = 0` makes it super easy to find or create a new category by name under the appropriate parent node.  The top-level categories all have parent_id = 0 (instead of NULL).  If you want a category created as a sub-category, simply pass the parent category along.  For example:
+`Wordpress::Category#find_or_create category_name, parent = 0` makes it super easy to find or create a new category by name under the appropriate parent node.  The top-level categories all have parent_id = 0 (instead of NULL).  If you want a category created as a sub-category, simply pass the parent category along.  For example:
 
 ``` ruby
-foobar_category = WordPress::Category.find_or_create("Foobar") # a top-level category
-sub_category = WordPress::Category.find_or_create("Foo", foobar_category) # A sub-category of "Foobar"
+foobar_category = Wordpress::Category.find_or_create("Foobar") # a top-level category
+sub_category = Wordpress::Category.find_or_create("Foo", foobar_category) # A sub-category of "Foobar"
 ```
 
 You can also recursively navigate through sub_categories like so:
@@ -241,7 +243,7 @@ You can also recursively navigate through sub_categories like so:
     = f.text_area :post_content, class: "form-control input-sm hidden"
 
     %label Categories
-    = render 'categories', categories: WordPress::Category.all
+    = render 'categories', categories: Wordpress::Category.all
     
     = f.submit 'Save', class: "btn"
 ```
@@ -257,44 +259,44 @@ You can also recursively navigate through sub_categories like so:
         = render 'dashboard/categories', categories: category.sub_categories
 ```
 
-### WordPress::PostTag
+### Wordpress::PostTag
 
-The PostTag class works similar to the Category class, but for "post_tag" taxonomy types.  Like Category's class-level methods, there is likewise a WordPress::PostTag#cloud and WordPress::PostTag#find_or_create methods to facilitate tagging.  PostTags are not hierarchical and the parent_id is always zero.
+The PostTag class works similar to the Category class, but for "post_tag" taxonomy types.  Like Category's class-level methods, there is likewise a Wordpress::PostTag#cloud and Wordpress::PostTag#find_or_create methods to facilitate tagging.  PostTags are not hierarchical and the parent_id is always zero.
 
 An HAML example for rendering Tag cloud:
 
 ``` haml
 %h2 Tags
 %div{style: 'margin-left: 25%'}
-  - tags = WordPress::PostTag.cloud.map{ |t| link_to t[:tag].name, tag_path(t[:tag]), style: "font-size: #{t[:size]}em" }
+  - tags = Wordpress::PostTag.cloud.map{ |t| link_to t[:tag].name, tag_path(t[:tag]), style: "font-size: #{t[:size]}em" }
   = tags.join(" &middot; ").html_safe
 ```
 
 NOTE: post_path, tag_path, category_path, etc. all must be appropriately defined in your config/routes.rb file.
 
-### WordPress::Taxonomy 
+### Wordpress::Taxonomy 
 
-The WordPress::Taxonomy class provides a way to easily traverse the WordPress taxonomy infrastructure.  It is primarily used internally and as the parent class of the WordPress::PostTag, WordPress::Category, and WordPress::LinkCategory classes.  However, it can be potentially useful within your Rails project as a means of finding all posts that any particular taxonomical term is associated with.
+The Wordpress::Taxonomy class provides a way to easily traverse the Wordpress taxonomy infrastructure.  It is primarily used internally and as the parent class of the Wordpress::PostTag, Wordpress::Category, and Wordpress::LinkCategory classes.  However, it can be potentially useful within your Rails project as a means of finding all posts that any particular taxonomical term is associated with.
 
 For example:
 
 ``` ruby
-taxonomy = WordPress::Taxonomy.first # => The "General" category on my blog, a WordPress::Category instance
+taxonomy = Wordpress::Taxonomy.first # => The "General" category on my blog, a Wordpress::Category instance
 taxonomy.posts.count # => 19
 ```
 
-### WordPress::User
+### Wordpress::User
 
 This class provides access to the records contained in the wp_users table.  For example:
 
 ``` ruby
-@author = WordPress::User.first
+@author = Wordpress::User.first
 @author.posts.count # => 19
 ```
 
-### WordPress::Term
+### Wordpress::Term
 
-The wp_terms table holds the leaf nodes of the WordPress::Taxonomy class.  That is, the name and slug given to the specific Taxonomy.  When new tags and categories are added, the names for these are ultimately delegated to this model and the slug value computed for the new tags must be unique.  This class typically isn't directly accessed.
+The wp_terms table holds the leaf nodes of the Wordpress::Taxonomy class.  That is, the name and slug given to the specific Taxonomy.  When new tags and categories are added, the names for these are ultimately delegated to this model and the slug value computed for the new tags must be unique.  This class typically isn't directly accessed.
 
 ### Extending in your Rails projects
 
@@ -305,7 +307,7 @@ In the above folder add a decorator for the model you wish to "decorate"
 Example:  ~/app/decorators/models/word_press/post_decorator.rb
 
 ``` ruby
-WordPress::Post.class_eval do
+Wordpress::Post.class_eval do
   has_many :snippets, foreign_key: "post_id"
 
   def has_revisions?

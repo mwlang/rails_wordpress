@@ -1,7 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
-require 'word_press'
+require 'rails_wordpress'
 
 Bundler.require(*Rails.groups)
 

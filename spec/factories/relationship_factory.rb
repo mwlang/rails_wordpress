@@ -1,4 +1,4 @@
 FactoryGirl.define do
-  factory :relationship, :class => WordPress::Relationship do
+  factory :relationship, :class => Wordpress::Relationship do
   end
 end

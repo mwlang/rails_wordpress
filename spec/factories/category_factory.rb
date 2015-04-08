@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :category, class: WordPress::Category do
+  factory :category, class: Wordpress::Category do
     transient do
       name "NAME"
     end

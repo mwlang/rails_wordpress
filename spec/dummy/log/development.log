@@ -111,526 +111,526 @@ WHERE fk.referenced_column_name is not null
   AND fk.table_name = 'wp_users'
 
   [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `wp_users`[0m
-  [1m[36mWordPress::Post Load (0.2ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts`  ORDER BY `wp_posts`.`ID` ASC LIMIT 1[0m
-  [1m[35mWordPress::Post Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_parent` = 1  ORDER BY `wp_posts`.`post_date` DESC LIMIT 1
-  [1m[36mWordPress::Post Load (0.4ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_parent` = 1  ORDER BY `wp_posts`.`post_date` DESC LIMIT 1[0m
-  [1m[35mWordPress::Post Load (0.2ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_parent` = 1  ORDER BY `wp_posts`.`post_date` DESC LIMIT 1
-  [1m[36mWordPress::Post Load (0.3ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_status` = 'publish'  ORDER BY `wp_posts`.`ID` ASC LIMIT 1[0m
-  [1m[35mWordPress::Post Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_status` = 'publish'  ORDER BY `wp_posts`.`ID` DESC LIMIT 1
-  [1m[36mWordPress::WpPost Load (0.2ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts`  ORDER BY `wp_posts`.`ID` ASC LIMIT 1[0m
-  [1m[35mWordPress::WpPost Load (0.4ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts`  ORDER BY `wp_posts`.`ID` ASC LIMIT 1
-  [1m[36mWordPress::WpPost Load (0.2ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts`  ORDER BY `wp_posts`.`ID` ASC LIMIT 1[0m
-  [1m[35mWordPress::WpPost Load (0.4ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts`  ORDER BY `wp_posts`.`ID` ASC LIMIT 1
-  [1m[36mWordPress::PostTag Load (0.2ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY `wp_term_taxonomy`.`term_taxonomy_id` ASC LIMIT 1[0m
-  [1m[36mWordPress::PostTag Load (0.2ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY `wp_term_taxonomy`.`term_taxonomy_id` ASC LIMIT 1[0m
+  [1m[36mWordpress::Post Load (0.2ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts`  ORDER BY `wp_posts`.`ID` ASC LIMIT 1[0m
+  [1m[35mWordpress::Post Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_parent` = 1  ORDER BY `wp_posts`.`post_date` DESC LIMIT 1
+  [1m[36mWordpress::Post Load (0.4ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_parent` = 1  ORDER BY `wp_posts`.`post_date` DESC LIMIT 1[0m
+  [1m[35mWordpress::Post Load (0.2ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_parent` = 1  ORDER BY `wp_posts`.`post_date` DESC LIMIT 1
+  [1m[36mWordpress::Post Load (0.3ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_status` = 'publish'  ORDER BY `wp_posts`.`ID` ASC LIMIT 1[0m
+  [1m[35mWordpress::Post Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_status` = 'publish'  ORDER BY `wp_posts`.`ID` DESC LIMIT 1
+  [1m[36mWordpress::WpPost Load (0.2ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts`  ORDER BY `wp_posts`.`ID` ASC LIMIT 1[0m
+  [1m[35mWordpress::WpPost Load (0.4ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts`  ORDER BY `wp_posts`.`ID` ASC LIMIT 1
+  [1m[36mWordpress::WpPost Load (0.2ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts`  ORDER BY `wp_posts`.`ID` ASC LIMIT 1[0m
+  [1m[35mWordpress::WpPost Load (0.4ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts`  ORDER BY `wp_posts`.`ID` ASC LIMIT 1
+  [1m[36mWordpress::PostTag Load (0.2ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY `wp_term_taxonomy`.`term_taxonomy_id` ASC LIMIT 1[0m
+  [1m[36mWordpress::PostTag Load (0.2ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY `wp_term_taxonomy`.`term_taxonomy_id` ASC LIMIT 1[0m
   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')
-  [1m[36mWordPress::Category Load (0.3ms)[0m  [1mSELECT `word_press_categories`.* FROM `word_press_categories`[0m
+  [1m[36mWordpress::Category Load (0.3ms)[0m  [1mSELECT `word_press_categories`.* FROM `word_press_categories`[0m
 Mysql2::Error: Table 'cc_development.word_press_categories' doesn't exist: SELECT `word_press_categories`.* FROM `word_press_categories`
-  [1m[35mWordPress::Category Load (0.3ms)[0m  SELECT `word_press_categories`.* FROM `word_press_categories`
+  [1m[35mWordpress::Category Load (0.3ms)[0m  SELECT `word_press_categories`.* FROM `word_press_categories`
 Mysql2::Error: Table 'cc_development.word_press_categories' doesn't exist: SELECT `word_press_categories`.* FROM `word_press_categories`
-  [1m[36mWordPress::Category Load (0.2ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('category')[0m
-  [1m[35mWordPress::Post Load (2.2ms)[0m  SELECT `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post')
-  [1m[36mWordPress::Category Load (0.3ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('category')[0m
-  [1m[35mWordPress::Post Exists (0.4ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`wp_term_taxonomy_id` = 1 LIMIT 1
+  [1m[36mWordpress::Category Load (0.2ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('category')[0m
+  [1m[35mWordpress::Post Load (2.2ms)[0m  SELECT `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post')
+  [1m[36mWordpress::Category Load (0.3ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('category')[0m
+  [1m[35mWordpress::Post Exists (0.4ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`wp_term_taxonomy_id` = 1 LIMIT 1
 Mysql2::Error: Unknown column 'wp_term_relationships.wp_term_taxonomy_id' in 'where clause': SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`wp_term_taxonomy_id` = 1 LIMIT 1
-  [1m[36mWordPress::Category Load (0.4ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('category')[0m
-  [1m[35mWordPress::Post Exists (0.3ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`wp_term_taxonomy_id` = 1 LIMIT 1
+  [1m[36mWordpress::Category Load (0.4ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('category')[0m
+  [1m[35mWordpress::Post Exists (0.3ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`wp_term_taxonomy_id` = 1 LIMIT 1
 Mysql2::Error: Unknown column 'wp_term_relationships.wp_term_taxonomy_id' in 'where clause': SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`wp_term_taxonomy_id` = 1 LIMIT 1
-  [1m[36mWordPress::Category Load (0.3ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('category')[0m
-  [1m[35mWordPress::Post Exists (0.3ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`wp_term_taxonomy_id` = 1 LIMIT 1
+  [1m[36mWordpress::Category Load (0.3ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('category')[0m
+  [1m[35mWordpress::Post Exists (0.3ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`wp_term_taxonomy_id` = 1 LIMIT 1
 Mysql2::Error: Unknown column 'wp_term_relationships.wp_term_taxonomy_id' in 'where clause': SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`wp_term_taxonomy_id` = 1 LIMIT 1
-  [1m[36mWordPress::Category Load (0.3ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('category')[0m
-  [1m[35mWordPress::Post Exists (0.2ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_tid` = 1 LIMIT 1
+  [1m[36mWordpress::Category Load (0.3ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('category')[0m
+  [1m[35mWordpress::Post Exists (0.2ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_tid` = 1 LIMIT 1
 Mysql2::Error: Unknown column 'wp_term_relationships.term_tid' in 'where clause': SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_tid` = 1 LIMIT 1
-  [1m[36mWordPress::Category Load (0.3ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('category')[0m
-  [1m[35mWordPress::Post Exists (0.3ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 1 LIMIT 1
-  [1m[36mWordPress::Post Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 3 LIMIT 1[0m
-  [1m[35mWordPress::Post Exists (0.2ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 4 LIMIT 1
-  [1m[36mWordPress::Post Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 5 LIMIT 1[0m
-  [1m[35mWordPress::Post Exists (0.2ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 6 LIMIT 1
-  [1m[36mWordPress::Post Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 7 LIMIT 1[0m
-  [1m[35mWordPress::Post Exists (0.2ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 8 LIMIT 1
-  [1m[36mWordPress::Post Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 9 LIMIT 1[0m
-  [1m[35mWordPress::Post Exists (0.3ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 10 LIMIT 1
-  [1m[36mWordPress::Post Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 26 LIMIT 1[0m
-  [1m[35mWordPress::Post Exists (0.2ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 37 LIMIT 1
-  [1m[36mWordPress::Post Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 74 LIMIT 1[0m
-  [1m[35mWordPress::Post Exists (0.2ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 75 LIMIT 1
-  [1m[36mWordPress::Post Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 76 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 1 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 3 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 5 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 8 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 10 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1
-  [1m[36mWordPress::Term Load (0.6ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 33 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 69 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 70 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 71 LIMIT 1
-  [1m[36mWordPress::PostTag Load (0.4ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1[0m
-  [1m[35mWordPress::Post Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1
-  [1m[36mWordPress::Post Load (0.4ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
-  [1m[35mWordPress::WpTermTaxonomy Load (0.3ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy`
+  [1m[36mWordpress::Category Load (0.3ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('category')[0m
+  [1m[35mWordpress::Post Exists (0.3ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 1 LIMIT 1
+  [1m[36mWordpress::Post Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 3 LIMIT 1[0m
+  [1m[35mWordpress::Post Exists (0.2ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 4 LIMIT 1
+  [1m[36mWordpress::Post Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 5 LIMIT 1[0m
+  [1m[35mWordpress::Post Exists (0.2ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 6 LIMIT 1
+  [1m[36mWordpress::Post Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 7 LIMIT 1[0m
+  [1m[35mWordpress::Post Exists (0.2ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 8 LIMIT 1
+  [1m[36mWordpress::Post Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 9 LIMIT 1[0m
+  [1m[35mWordpress::Post Exists (0.3ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 10 LIMIT 1
+  [1m[36mWordpress::Post Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 26 LIMIT 1[0m
+  [1m[35mWordpress::Post Exists (0.2ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 37 LIMIT 1
+  [1m[36mWordpress::Post Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 74 LIMIT 1[0m
+  [1m[35mWordpress::Post Exists (0.2ms)[0m  SELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 75 LIMIT 1
+  [1m[36mWordpress::Post Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `wp_posts` INNER JOIN `wp_term_relationships` ON `wp_posts`.`ID` = `wp_term_relationships`.`object_id` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_term_relationships`.`term_taxonomy_id` = 76 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 1 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 3 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 5 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 8 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 10 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1
+  [1m[36mWordpress::Term Load (0.6ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 33 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 69 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 70 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 71 LIMIT 1
+  [1m[36mWordpress::PostTag Load (0.4ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1[0m
+  [1m[35mWordpress::Post Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1
+  [1m[36mWordpress::Post Load (0.4ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
+  [1m[35mWordpress::WpTermTaxonomy Load (0.3ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy`
 Mysql2::Error: Table 'cc_development.word_press_link_categories' doesn't exist: SHOW FULL FIELDS FROM `word_press_link_categories`
-  [1m[36mWordPress::Post Load (0.4ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
-  [1m[35mWordPress::WpTermTaxonomy Load (0.3ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_relationships`.`object_id` = 3 AND `wp_term_taxonomy`.`taxonomy` = 'category'
-  [1m[36mWordPress::Post Load (0.4ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
+  [1m[36mWordpress::Post Load (0.4ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
+  [1m[35mWordpress::WpTermTaxonomy Load (0.3ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_relationships`.`object_id` = 3 AND `wp_term_taxonomy`.`taxonomy` = 'category'
+  [1m[36mWordpress::Post Load (0.4ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_relationships`.`object_id` = 3 AND `wp_term_taxonomy`.`taxonomy` = 'category'
-  [1m[36mWordPress::Post Load (0.4ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
-  [1m[35mWordPress::WpTermTaxonomy Load (0.3ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_relationships`.`object_id` = 3 AND `wp_term_taxonomy`.`taxonomy` = 'category'
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 8 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1
-  [1m[36mWordPress::Post Load (0.5ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
-  [1m[35mWordPress::WpTermTaxonomy Load (0.3ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy`
+  [1m[36mWordpress::Post Load (0.4ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
+  [1m[35mWordpress::WpTermTaxonomy Load (0.3ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_relationships`.`object_id` = 3 AND `wp_term_taxonomy`.`taxonomy` = 'category'
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 8 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1
+  [1m[36mWordpress::Post Load (0.5ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
+  [1m[35mWordpress::WpTermTaxonomy Load (0.3ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy`
 Mysql2::Error: Table 'cc_development.word_press_link_categories' doesn't exist: SHOW FULL FIELDS FROM `word_press_link_categories`
-  [1m[36mWordPress::Post Load (0.2ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
-  [1m[35mWordPress::WpTermTaxonomy Load (0.2ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy`
+  [1m[36mWordpress::Post Load (0.2ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
+  [1m[35mWordpress::WpTermTaxonomy Load (0.2ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy`
 Mysql2::Error: Table 'cc_development.word_press_link_categories' doesn't exist: SHOW FULL FIELDS FROM `word_press_link_categories`
-  [1m[36mWordPress::Post Load (0.5ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
-  [1m[35mWordPress::WpTermTaxonomy Load (0.3ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy`
+  [1m[36mWordpress::Post Load (0.5ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
+  [1m[35mWordpress::WpTermTaxonomy Load (0.3ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy`
 Mysql2::Error: Table 'cc_development.word_press_link_categories' doesn't exist: SHOW FULL FIELDS FROM `word_press_link_categories`
-  [1m[36mWordPress::WpTermTaxonomy Load (0.3ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy`[0m
+  [1m[36mWordpress::WpTermTaxonomy Load (0.3ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy`[0m
 Mysql2::Error: Table 'cc_development.word_press_link_categories' doesn't exist: SHOW FULL FIELDS FROM `word_press_link_categories`
-  [1m[35mWordPress::Post Load (0.5ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1
-  [1m[36mWordPress::WpTermTaxonomy Load (0.4ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy`[0m
+  [1m[35mWordpress::Post Load (0.5ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1
+  [1m[36mWordpress::WpTermTaxonomy Load (0.4ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy`[0m
 Mysql2::Error: Table 'cc_development.word_press_link_categories' doesn't exist: SHOW FULL FIELDS FROM `word_press_link_categories`
-  [1m[35mWordPress::Post Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1
-  [1m[36mWordPress::WpTermTaxonomy Load (0.2ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_relationships`.`object_id` = 3[0m
-  [1m[35mWordPress::WpTermTaxonomy Load (0.4ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_relationships`.`object_id` = 3
-  [1m[36mWordPress::WpTermTaxonomy Load (0.5ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_relationships`.`object_id` = 3[0m
-  [1m[35mWordPress::WpTermTaxonomy Load (0.4ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_relationships`.`object_id` = 3
-  [1m[36mWordPress::Post Load (0.3ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
-  [1m[35mWordPress::PostTag Load (1.0ms)[0m  SELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag') AND `wp_term_relationships`.`object_id` = 3  ORDER BY `wp_term_taxonomy`.`term_taxonomy_id` ASC LIMIT 1
-  [1m[36mWordPress::PostTag Load (0.4ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag') AND `wp_term_relationships`.`object_id` = 3[0m
-  [1m[35mWordPress::Category Load (0.4ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_taxonomy`.`taxonomy` IN ('category') AND `wp_term_relationships`.`object_id` = 3
-  [1m[36mWordPress::User Load (0.5ms)[0m  [1mSELECT  `wp_users`.* FROM `wp_users` WHERE `wp_users`.`ID` = 2 LIMIT 1[0m
-  [1m[36mWordPress::PostTag Load (0.3ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1[0m
-  [1m[35mWordPress::PostTag Load (0.4ms)[0m  SELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1
-  [1m[36mWordPress::PostTag Load (0.5ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1
-  [1m[36mWordPress::Term Load (0.4ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1[0m
-  [1m[35mWordPress::PostTag Load (0.5ms)[0m  SELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1
-  [1m[36mWordPress::PostTag Load (0.5ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1[0m
-  [1m[35mWordPress::PostTag Load (0.7ms)[0m  SELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1
-  [1m[36mWordPress::PostTag Load (0.5ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1[0m
-  [1m[35mWordPress::PostTag Load (0.5ms)[0m  SELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_terms` ON `wp_terms`.`term_id` = `wp_term_taxonomy`.`term_id` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1
-  [1m[36mWordPress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1
-  [1m[36mWordPress::PostTag Load (0.3ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40[0m
-  [1m[35mWordPress::Term Load (0.3ms)[0m  SELECT `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` IN (19, 16, 47, 52, 58, 9, 4, 24, 28, 42, 43, 44, 60, 75, 76, 11, 12, 13, 14, 15, 17, 18, 20, 6, 21, 22, 23, 25, 26, 27, 29, 30, 31, 32, 34, 35, 36, 37, 38, 39)
-  [1m[36mWordPress::PostTag Load (0.5ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40[0m
-  [1m[35mWordPress::Term Load (0.3ms)[0m  SELECT `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` IN (19, 16, 47, 52, 58, 9, 4, 24, 28, 42, 43, 44, 60, 75, 76, 11, 12, 13, 14, 15, 17, 18, 20, 6, 21, 22, 23, 25, 26, 27, 29, 30, 31, 32, 34, 35, 36, 37, 38, 39)
-  [1m[36mWordPress::Post Load (0.2ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
-  [1m[35mWordPress::Category Load (0.3ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_taxonomy`.`taxonomy` IN ('category') AND `wp_term_relationships`.`object_id` = 3
-  [1m[36mWordPress::WpTermTaxonomy Load (0.3ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`term_taxonomy_id` = 8 LIMIT 1[0m
-  [1m[35mWordPress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 8 LIMIT 1
-  [1m[36mWordPress::Term Load (0.3ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1[0m
-  [1m[35mWordPress::WpTermTaxonomy Load (0.3ms)[0m  SELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`term_taxonomy_id` = 0 LIMIT 1
+  [1m[35mWordpress::Post Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1
+  [1m[36mWordpress::WpTermTaxonomy Load (0.2ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_relationships`.`object_id` = 3[0m
+  [1m[35mWordpress::WpTermTaxonomy Load (0.4ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_relationships`.`object_id` = 3
+  [1m[36mWordpress::WpTermTaxonomy Load (0.5ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_relationships`.`object_id` = 3[0m
+  [1m[35mWordpress::WpTermTaxonomy Load (0.4ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_relationships`.`object_id` = 3
+  [1m[36mWordpress::Post Load (0.3ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
+  [1m[35mWordpress::PostTag Load (1.0ms)[0m  SELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag') AND `wp_term_relationships`.`object_id` = 3  ORDER BY `wp_term_taxonomy`.`term_taxonomy_id` ASC LIMIT 1
+  [1m[36mWordpress::PostTag Load (0.4ms)[0m  [1mSELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag') AND `wp_term_relationships`.`object_id` = 3[0m
+  [1m[35mWordpress::Category Load (0.4ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_taxonomy`.`taxonomy` IN ('category') AND `wp_term_relationships`.`object_id` = 3
+  [1m[36mWordpress::User Load (0.5ms)[0m  [1mSELECT  `wp_users`.* FROM `wp_users` WHERE `wp_users`.`ID` = 2 LIMIT 1[0m
+  [1m[36mWordpress::PostTag Load (0.3ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1[0m
+  [1m[35mWordpress::PostTag Load (0.4ms)[0m  SELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1
+  [1m[36mWordpress::PostTag Load (0.5ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1
+  [1m[36mWordpress::Term Load (0.4ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1[0m
+  [1m[35mWordpress::PostTag Load (0.5ms)[0m  SELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1
+  [1m[36mWordpress::PostTag Load (0.5ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1[0m
+  [1m[35mWordpress::PostTag Load (0.7ms)[0m  SELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1
+  [1m[36mWordpress::PostTag Load (0.5ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1[0m
+  [1m[35mWordpress::PostTag Load (0.5ms)[0m  SELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_terms` ON `wp_terms`.`term_id` = `wp_term_taxonomy`.`term_id` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 19 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 16 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 47 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 52 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 58 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 4 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 24 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 28 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 42 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 43 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 44 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 60 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 75 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 76 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 11 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 12 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 13 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 14 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 15 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 17 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 18 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 20 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 6 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 21 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 22 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 23 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 25 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 26 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 27 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 29 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 30 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 31 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 32 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 34 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 35 LIMIT 1
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 36 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 37 LIMIT 1
+  [1m[36mWordpress::Term Load (0.1ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 38 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.1ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 39 LIMIT 1
+  [1m[36mWordpress::PostTag Load (0.3ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40[0m
+  [1m[35mWordpress::Term Load (0.3ms)[0m  SELECT `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` IN (19, 16, 47, 52, 58, 9, 4, 24, 28, 42, 43, 44, 60, 75, 76, 11, 12, 13, 14, 15, 17, 18, 20, 6, 21, 22, 23, 25, 26, 27, 29, 30, 31, 32, 34, 35, 36, 37, 38, 39)
+  [1m[36mWordpress::PostTag Load (0.5ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag')  ORDER BY count desc LIMIT 40[0m
+  [1m[35mWordpress::Term Load (0.3ms)[0m  SELECT `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` IN (19, 16, 47, 52, 58, 9, 4, 24, 28, 42, 43, 44, 60, 75, 76, 11, 12, 13, 14, 15, 17, 18, 20, 6, 21, 22, 23, 25, 26, 27, 29, 30, 31, 32, 34, 35, 36, 37, 38, 39)
+  [1m[36mWordpress::Post Load (0.2ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
+  [1m[35mWordpress::Category Load (0.3ms)[0m  SELECT `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_taxonomy`.`taxonomy` IN ('category') AND `wp_term_relationships`.`object_id` = 3
+  [1m[36mWordpress::WpTermTaxonomy Load (0.3ms)[0m  [1mSELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`term_taxonomy_id` = 8 LIMIT 1[0m
+  [1m[35mWordpress::Term Load (0.2ms)[0m  SELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 8 LIMIT 1
+  [1m[36mWordpress::Term Load (0.3ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 9 LIMIT 1[0m
+  [1m[35mWordpress::WpTermTaxonomy Load (0.3ms)[0m  SELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` WHERE `wp_term_taxonomy`.`term_taxonomy_id` = 0 LIMIT 1
 Mysql2::Error: Table 'cc_development.word_press_revisions' doesn't exist: SHOW FULL FIELDS FROM `word_press_revisions`
   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('revision')[0m
-  [1m[35mWordPress::Revision Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('revision')  ORDER BY `wp_posts`.`ID` DESC LIMIT 1
-  [1m[36mWordPress::Revision Load (0.4ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('revision')  ORDER BY `wp_posts`.`ID` DESC LIMIT 1[0m
-  [1m[35mWordPress::Post Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 130 LIMIT 1
-  [1m[36mWordPress::Revision Load (0.5ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('revision')  ORDER BY `wp_posts`.`ID` DESC LIMIT 1[0m
-  [1m[35mWordPress::Post Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 130 LIMIT 1
+  [1m[35mWordpress::Revision Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('revision')  ORDER BY `wp_posts`.`ID` DESC LIMIT 1
+  [1m[36mWordpress::Revision Load (0.4ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('revision')  ORDER BY `wp_posts`.`ID` DESC LIMIT 1[0m
+  [1m[35mWordpress::Post Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 130 LIMIT 1
+  [1m[36mWordpress::Revision Load (0.5ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('revision')  ORDER BY `wp_posts`.`ID` DESC LIMIT 1[0m
+  [1m[35mWordpress::Post Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 130 LIMIT 1
   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`post_parent` = 130[0m
-  [1m[35mWordPress::Revision Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('revision')  ORDER BY `wp_posts`.`ID` DESC LIMIT 1
-  [1m[36mWordPress::Post Load (0.3ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 130 LIMIT 1[0m
+  [1m[35mWordpress::Revision Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('revision')  ORDER BY `wp_posts`.`ID` DESC LIMIT 1
+  [1m[36mWordpress::Post Load (0.3ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 130 LIMIT 1[0m
   [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('revision') AND `wp_posts`.`post_parent` = 130
   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
   [1m[35mSQL (0.3ms)[0m  INSERT INTO `wp_terms` (`name`, `slug`) VALUES ('foo', 'foo')
   [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
-  [1m[36mWordPress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 0 LIMIT 1[0m
+  [1m[36mWordpress::Term Load (0.2ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 0 LIMIT 1[0m
   [1m[35m (0.2ms)[0m  BEGIN
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `wp_term_taxonomy` (`taxonomy`, `description`) VALUES ('post_tag', 'Describes World Domination')[0m
 Mysql2::Error: Duplicate entry '0-post_tag' for key 'term_id_taxonomy': INSERT INTO `wp_term_taxonomy` (`taxonomy`, `description`) VALUES ('post_tag', 'Describes World Domination')
   [1m[35m (0.1ms)[0m  ROLLBACK
-  [1m[36mWordPress::Term Load (0.3ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 0 LIMIT 1[0m
+  [1m[36mWordpress::Term Load (0.3ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 0 LIMIT 1[0m
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `wp_term_taxonomy` (`taxonomy`, `description`) VALUES ('post_tag', 'Describes World Domination')[0m
 Mysql2::Error: Duplicate entry '0-post_tag' for key 'term_id_taxonomy': INSERT INTO `wp_term_taxonomy` (`taxonomy`, `description`) VALUES ('post_tag', 'Describes World Domination')
   [1m[35m (0.1ms)[0m  ROLLBACK
-  [1m[36mWordPress::Term Load (0.3ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 0 LIMIT 1[0m
+  [1m[36mWordpress::Term Load (0.3ms)[0m  [1mSELECT  `wp_terms`.* FROM `wp_terms` WHERE `wp_terms`.`term_id` = 0 LIMIT 1[0m
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `wp_term_taxonomy` (`taxonomy`, `description`) VALUES ('post_tag', 'Describes World Domination')[0m
 Mysql2::Error: Duplicate entry '0-post_tag' for key 'term_id_taxonomy': INSERT INTO `wp_term_taxonomy` (`taxonomy`, `description`) VALUES ('post_tag', 'Describes World Domination')
   [1m[35m (0.1ms)[0m  ROLLBACK
-  [1m[36mWordPress::Post Load (0.3ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
-  [1m[35mWordPress::PostTag Load (1.2ms)[0m  SELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag') AND `wp_term_relationships`.`object_id` = 3  ORDER BY `wp_term_taxonomy`.`term_taxonomy_id` ASC LIMIT 1
-  [1m[36mWordPress::Relationship Load (0.3ms)[0m  [1mSELECT  `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3 LIMIT 1[0m
-  [1m[35mWordPress::Relationship Load (0.5ms)[0m  SELECT  `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3  ORDER BY `wp_term_relationships`.`` DESC LIMIT 1
+  [1m[36mWordpress::Post Load (0.3ms)[0m  [1mSELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1[0m
+  [1m[35mWordpress::PostTag Load (1.2ms)[0m  SELECT  `wp_term_taxonomy`.* FROM `wp_term_taxonomy` INNER JOIN `wp_term_relationships` ON `wp_term_taxonomy`.`term_taxonomy_id` = `wp_term_relationships`.`term_taxonomy_id` WHERE `wp_term_taxonomy`.`taxonomy` IN ('post_tag') AND `wp_term_relationships`.`object_id` = 3  ORDER BY `wp_term_taxonomy`.`term_taxonomy_id` ASC LIMIT 1
+  [1m[36mWordpress::Relationship Load (0.3ms)[0m  [1mSELECT  `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3 LIMIT 1[0m
+  [1m[35mWordpress::Relationship Load (0.5ms)[0m  SELECT  `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3  ORDER BY `wp_term_relationships`.`` DESC LIMIT 1
 Mysql2::Error: Unknown column 'wp_term_relationships.' in 'order clause': SELECT  `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3  ORDER BY `wp_term_relationships`.`` DESC LIMIT 1
-  [1m[36mWordPress::Relationship Load (0.3ms)[0m  [1mSELECT  `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3 LIMIT 1[0m
+  [1m[36mWordpress::Relationship Load (0.3ms)[0m  [1mSELECT  `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3 LIMIT 1[0m
   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3
-  [1m[36mWordPress::Relationship Load (0.3ms)[0m  [1mSELECT `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3[0m
-  [1m[35mWordPress::Post Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1
-  [1m[36mWordPress::Relationship Load (0.4ms)[0m  [1mSELECT  `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3  ORDER BY `wp_term_relationships`.`` DESC LIMIT 1[0m
+  [1m[36mWordpress::Relationship Load (0.3ms)[0m  [1mSELECT `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3[0m
+  [1m[35mWordpress::Post Load (0.3ms)[0m  SELECT  `wp_posts`.* FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`ID` = 3 LIMIT 1
+  [1m[36mWordpress::Relationship Load (0.4ms)[0m  [1mSELECT  `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3  ORDER BY `wp_term_relationships`.`` DESC LIMIT 1[0m
 Mysql2::Error: Unknown column 'wp_term_relationships.' in 'order clause': SELECT  `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3  ORDER BY `wp_term_relationships`.`` DESC LIMIT 1
-  [1m[35mWordPress::Relationship Load (0.4ms)[0m  SELECT  `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3  ORDER BY `wp_term_relationships`.`` DESC LIMIT 1
+  [1m[35mWordpress::Relationship Load (0.4ms)[0m  SELECT  `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3  ORDER BY `wp_term_relationships`.`` DESC LIMIT 1
 Mysql2::Error: Unknown column 'wp_term_relationships.' in 'order clause': SELECT  `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3  ORDER BY `wp_term_relationships`.`` DESC LIMIT 1
-  [1m[36mWordPress::Relationship Load (0.3ms)[0m  [1mSELECT `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3[0m
-  [1m[35mWordPress::Relationship Load (0.3ms)[0m  SELECT  `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3  ORDER BY `wp_term_relationships`.`` DESC LIMIT 1
+  [1m[36mWordpress::Relationship Load (0.3ms)[0m  [1mSELECT `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3[0m
+  [1m[35mWordpress::Relationship Load (0.3ms)[0m  SELECT  `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3  ORDER BY `wp_term_relationships`.`` DESC LIMIT 1
 Mysql2::Error: Unknown column 'wp_term_relationships.' in 'order clause': SELECT  `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3  ORDER BY `wp_term_relationships`.`` DESC LIMIT 1
-  [1m[36mWordPress::Relationship Load (0.3ms)[0m  [1mSELECT `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3[0m
+  [1m[36mWordpress::Relationship Load (0.3ms)[0m  [1mSELECT `wp_term_relationships`.* FROM `wp_term_relationships` WHERE `wp_term_relationships`.`object_id` = 3[0m
   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post')[0m
   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post')[0m
   [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `wp_posts` WHERE `wp_posts`.`post_type` IN ('post') AND `wp_posts`.`post_status` = 'publish'
