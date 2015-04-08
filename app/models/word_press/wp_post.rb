@@ -117,15 +117,23 @@ module WordPress
     end
     
     def tag_names
-      tags.map(&:name)
+      first_revision.tags.map(&:name)
     end
 
     def tag_slugs
-      tags.map(&:slug)
+      first_revision.tags.map(&:slug)
     end
 
+    def category_names
+      first_revision.categories.map(&:name)
+    end
+    
+    def category_slugs
+      first_revision.categories.map(&:slug)
+    end
+    
     def created_at
-      post_date
+      first_revision.post_date
     end
 
     def has_category? category

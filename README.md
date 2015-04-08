@@ -77,7 +77,6 @@ end
 def post_params
   params[:post].permit(:post_title, :post_content, :post_excerpt, :post_tags, :post_categories => [])
 end
-
 ```
 
 The following scopes are available on WordPress::Post
@@ -89,17 +88,35 @@ The following scopes are available on WordPress::Post
 
 An example showing last 5 posts published:
 
-```
+``` ruby
 @recent_posts = WordPress::Post.published.recent(5)
 ```
 
 The following are also available on a given post (@post = WordPress::Post.first):
 
 * @post.first_revision => The first (a.k.a. parent) record for this post.  Relevant only to WordPress::Revision in this case
+* @post.latest_revision => The most recently saved revision of the post (may be either self or a WordPress::Revision instance)
 * @post.author => instance of WordPress::User and is the person that authored the post
 * @post.created_at => alias of the @post.first_revision.post_date
 * @post.categories => a collection of WordPress::Category
+* @post.category_names => an array of category names
 * @post.tags => a collection of WordPress::PostTag
+* @post.tag_names => an array of tag names
+
+Remember that WordPress::Revision often contains newer data than WordPress::Post because of WordPress' way of maintaining revisions.  When rendering your views, use these properties to ensure latest data is displayed:
+
+* @post.content => self.latest_revision.post_content or self.post_content
+* @post.excerpt => self.latest_revision.post_excerpt or self.post_excerpt
+* @post.title => self.latest_revision.post_title or self.post_title 
+* @post.updated_at => latest_revision.post_modified
+* @post.created_at => first_revision.post_created
+* @post.post_tags => first_revision.tags
+* @post.post_categories => first_revision.categories
+
+When you want to edit a Post, you'll likely want to edit against the latest revision rather than the first revision. You can do one of two strategies:
+
+1. Pass the original Post (@post.first_revision) to the form_for helper, but populate using form_tag helpers from the @post.latest_revision (or whichever revision you opt to load).  In the controller, @post = WordPress::Post.find(params[:id]) followed by @post.new_revision(post_params).save
+1. Pass the latest Revision (@revision or @post.last_revision) to the form_for helper.  In the controller @revision = WordPress::Revision.find(params[:id]) followed by @revision.new_revision(post_params).save
 
 ### Assigning Tags
 
@@ -109,14 +126,13 @@ WordPress::Post#post_tags= can take either a comma delimited list of tags or an 
 
 Some examples for tags:
 
-```
+``` ruby
 post = WordPress::Post.published.first
 post.tag_names # => ["Ruby Language", "Rails"]
 post.post_tags = "Ruby,Rails,Rails 4" # => Creates the new "Rails 4" tag and associates to the post record.
 
 # The following creates a new revision of the post, copying most of the fields, updating others appropriate. 
 # It also removes the above tags and assigns just "Foobar" tag to the post
-
 post.new_revision(:post_tags => ["Foobar"]).save!
 ```
 
@@ -133,7 +149,7 @@ WordPress::Post#post_categories= can take any of the following:
 
 Some examples for categories:
 
-```
+``` ruby
 foobar_category = WordPress::Category.find_or_create("Foobar") # a top-level category
 sub_category = WordPress::Category.find_or_create("Foo", foobar_category) # A sub-category of "Foobar"
 
@@ -143,7 +159,7 @@ post.post_categories = [foobar_category.id, sub_category.id] # assigns "Foobar" 
 
 The presence of Revisions complicates checking if a post belongs to specific categories.  If you are holding an instance of a WordPress::Revision instead of WordPress::Post, then @post.categories.include?(some_category) will fail because the relationship is maintained off the original WordPress::Post record. To check if a post is in a category, use has_category? as follows:
 
-```
+``` ruby
 # continuing above examples...
 post.save!
 post.has_category? foobar_category # => true 
@@ -211,6 +227,34 @@ foobar_category = WordPress::Category.find_or_create("Foobar") # a top-level cat
 sub_category = WordPress::Category.find_or_create("Foo", foobar_category) # A sub-category of "Foobar"
 ```
 
+You can also recursively navigate through sub_categories like so:
+
+``` haml
+# ~/app/views/posts/edit.html.haml
+= form_for @post do |f|
+    %label Title
+    = f.text_field :post_title, class: "form-control input-sm"
+
+    %label Content
+    = f.text_area :post_content, class: "form-control input-sm hidden"
+
+    %label Categories
+    = render 'categories', categories: WordPress::Category.all
+    
+    = f.submit 'Save', class: "btn"
+```
+
+``` haml
+# ~/app/views/posts/_categories.html.haml
+%ul
+  - categories.each do |category|
+    %li
+      = check_box :post, :post_categories, {multiple: true, checked: @post.has_category?(category)}, category.id, nil
+      = category.name
+      - unless category.sub_categories.empty?
+        = render 'dashboard/categories', categories: category.sub_categories
+```
+
 ### WordPress::PostTag
 
 The PostTag class works similar to the Category class, but for "post_tag" taxonomy types.  Like Category's class-level methods, there is likewise a WordPress::PostTag#cloud and WordPress::PostTag#find_or_create methods to facilitate tagging.  PostTags are not hierarchical and the parent_id is always zero.
@@ -226,6 +270,51 @@ An HAML example for rendering Tag cloud:
 
 NOTE: post_path, tag_path, category_path, etc. all must be appropriately defined in your config/routes.rb file.
 
+### WordPress::Taxonomy 
+
+The WordPress::Taxonomy class provides a way to easily traverse the WordPress taxonomy infrastructure.  It is primarily used internally and as the parent class of the WordPress::PostTag, WordPress::Category, and WordPress::LinkCategory classes.  However, it can be potentially useful within your Rails project as a means of finding all posts that any particular taxonomical term is associated with.
+
+For example:
+
+``` ruby
+taxonomy = WordPress::Taxonomy.first # => The "General" category on my blog, a WordPress::Category instance
+taxonomy.posts.count # => 19
+```
+
+### WordPress::User
+
+This class provides access to the records contained in the wp_users table.  For example:
+
+``` ruby
+@author = WordPress::User.first
+@author.posts.count # => 19
+```
+
+### WordPress::Term
+
+The wp_terms table holds the leaf nodes of the WordPress::Taxonomy class.  That is, the name and slug given to the specific Taxonomy.  When new tags and categories are added, the names for these are ultimately delegated to this model and the slug value computed for the new tags must be unique.  This class typically isn't directly accessed.
+
+### Extending in your Rails projects
+
+If you need to extend the functionality of any of the models, then this is easily done through the decorator pattern.  For example, create the following folder: ~/app/decorators/models/word_press  (This path is important to get right as the engine looks for it an auto-loads when present).
+
+In the above folder add a decorator for the model you wish to "decorate"
+
+Example:  ~/app/decorators/models/word_press/post_decorator.rb
+
+``` ruby
+WordPress::Post.class_eval do
+  has_many :snippets, foreign_key: "post_id"
+
+  def has_revisions?
+    !revisions.empty?
+  end
+  
+  def tagged
+    self.tags.map(&:name).join(",")
+  end
+end
+```
 
 ### License
 
