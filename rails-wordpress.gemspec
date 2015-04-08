@@ -7,11 +7,11 @@ require "word_press/version"
 Gem::Specification.new do |s|
   s.name        = "rails-wordpress"
   s.version     = WordPress::VERSION
-  s.authors     = ["mwlang"]
+  s.authors     = ["Michael Lang"]
   s.email       = ["mwlang@cybrains.net"]
   s.homepage    = "http://github.com/mwlang/rails-wordpress"
   s.summary     = "A Rails Engine to connect to WordPress tables with ActiveRecord modeling"
-  s.description = "This Engine allows you to easily wire up a Rails app to an existing WordPress database"
+  s.description = "A Rails Engine that enables you to easily wire up a Rails app to an existing WordPress database"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
