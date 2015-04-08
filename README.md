@@ -6,7 +6,9 @@ This is a WordPress Engine for Rails 4.x.  It provides ActiveRecord models that 
 
 The current state of this project is ALPHA and not everything is modeled, but there is solid implementation for posts, revisions, categories, and tags that will allow you to rapidly build a Rails-based blog or view on an active WordPress site that you have access to the database.  
 
-This engine is *not* providing API/RESTFul connections to a WordPress site.  It is a direct tie-in to the WordPress database with functionality reverse-engineered via ActiveRecord models.
+This engine is a direct tie-in to the WordPress database with functionality reverse-engineered via ActiveRecord models.  
+
+This engine (presently) does *not* provide API/RESTFul connections to a WordPress site nor Rails Views and View Helpers.
 
 This engine is currently in production use and being utilized in my blog at http://codeconnoisseur.org
 
