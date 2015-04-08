@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.description = "A Rails Engine that enables you to easily wire up a Rails app to an existing WordPress database"
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.rdoc", "Guardfile"]
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 4.2"
