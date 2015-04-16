@@ -1,5 +1,8 @@
 # Rails Wordpress
 
+[![Code Climate](https://codeclimate.com/github/mwlang/rails_wordpress/badges/gpa.svg)](https://codeclimate.com/github/mwlang/rails_wordpress)
+[![Test Coverage](https://codeclimate.com/github/mwlang/rails_wordpress/badges/coverage.svg)](https://codeclimate.com/github/mwlang/rails_wordpress)
+
 This is a Wordpress Engine for Rails 4.x.  It provides ActiveRecord models that directly utilize Wordpress' tables.  The model classes have been named for the most part according to typical Rails naming convention and model the actual underlying Wordpress concepts.  For example, wp_posts contains posts, pages, attachments, revisions, links, and many other meta types.  This engine models the most common ones: Wordpress::Post, Wordpress::Page, Wordpress::Revision, etc..
 
 ### Project Status

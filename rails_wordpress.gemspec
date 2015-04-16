@@ -27,4 +27,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "guard-rails", "~> 0.7"
   s.add_development_dependency "guard-rspec", "~> 4.5"
   s.add_development_dependency "database_cleaner", "~> 1.4"
+  s.add_development_dependency "codeclimate-test-reporter"
 end
