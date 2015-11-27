@@ -1,5 +1,5 @@
 module Wordpress
-  class Attachment < ActiveRecord::Base
+  class Attachment < WpPost
     def default_mime_type
       'image/png'
     end
