@@ -2,11 +2,11 @@ module Wordpress
   class WpPost < ActiveRecord::Base
     self.table_name = 'wp_posts'
     self.inheritance_column = 'post_type'
-    
+
     before_create :set_defaults
     before_save :touch_values
     after_save :save_relationships
-    
+
     scope :published, -> { where(post_status: "publish") }
     scope :descending, -> { order(post_modified: :desc, id: :desc) }
     scope :recent, -> (count = 10) { descending.limit(count) }
@@ -16,7 +16,8 @@ module Wordpress
     has_many :relationships, foreign_key: "object_id"
     has_many :tags, class_name: "PostTag", through: :relationships, source: :taxonomy, :dependent => :destroy
     has_many :categories, class_name: "Category", through: :relationships, source: :taxonomy, :dependent => :destroy
-    
+    has_many :wp_postmetas, class_name: "WpPostmeta", foreign_key: "post_id"
+
     belongs_to :author, class_name: "User", foreign_key: "post_author"
 
     def self.find_sti_class type_name
@@ -55,7 +56,7 @@ module Wordpress
       result.post_categories = params[:post_categories] if params[:post_categories]
       result
     end
-    
+
     def latest_revision
       revisions.descending.first || self
     end
@@ -71,15 +72,15 @@ module Wordpress
     def excerpt
       latest_revision.post_excerpt
     end
-    
+
     def created_at
       self.post_date
     end
-    
+
     def updated_at
       latest_revision.post_modified
     end
-    
+
     def set_defaults
       p = self.parent
       self.author = self.parent.try(:author) || User.first
@@ -93,7 +94,7 @@ module Wordpress
       content = (self.post_content || self.parent.try(:post_content)).to_s
       self.post_excerpt = content.length >= 512 ? "#{content.slice(0, 512)}..." : content \
         unless self.post_content_changed?
-          
+
       self.to_ping = '' unless self.to_ping_changed?
       self.pinged = '' unless self.pinged_changed?
       self.post_content_filtered = '' unless self.post_content_filtered_changed?
@@ -102,7 +103,7 @@ module Wordpress
     def first_revision
       self.parent || self
     end
-    
+
     def touch_values
       self.post_modified = Time.now unless self.post_modified_changed?
       self.post_modified_gmt = self.post_modified.utc  unless self.post_modified_gmt_changed?
@@ -113,9 +114,9 @@ module Wordpress
       return if self.first_revision == self
       self.first_revision.tags.each{|item| item.destroy if item.marked_for_destruction? }
       self.first_revision.categories.each{|item| item.destroy if item.marked_for_destruction? }
-      self.first_revision.save 
+      self.first_revision.save
     end
-    
+
     def tag_names
       first_revision.tags.map(&:name)
     end
@@ -127,11 +128,11 @@ module Wordpress
     def category_names
       first_revision.categories.map(&:name)
     end
-    
+
     def category_slugs
       first_revision.categories.map(&:slug)
     end
-    
+
     def created_at
       first_revision.post_date
     end
@@ -143,7 +144,7 @@ module Wordpress
         first_revision.categories.include? category
       end
     end
-    
+
     def post_tags
       first_revision.tags.map(&:name).join(",")
     end
@@ -152,10 +153,10 @@ module Wordpress
       tag_names = tag_names.split(",").map{ |name| name.strip } unless tag_names.is_a?(Array)
       tags_to_assign = tag_names.map{ |tag_name| PostTag.find_or_create(tag_name) }
       new_tags = tags_to_assign.reject{ |tag| first_revision.tags.include?(tag) }
-      
+
       first_revision.tags.each{ |tag| tag.mark_for_destruction unless tags_to_assign.include?(tag) }
       new_tags.each{ |tag| first_revision.relationships.build(taxonomy: tag) }
-    end  
+    end
 
     def post_categories
       first_revision.categories.map(&:name).join(",")
@@ -170,18 +171,18 @@ module Wordpress
         first_revision.relationships.build(taxonomy: category)
       end
     end
-    
+
     def assign_category_names category_names
       category_ids = category_names.map{ |name| Category.find_or_create(name).id }.compact
       assign_category_ids category_ids
     end
-    
+
     def post_categories= category_list
       # turn into an array of items unless already so
       unless category_list.is_a?(Array)
         category_list = category_list.to_s.split(",")
           .map{ |name| name.strip }
-          .reject{|r| r.blank?} 
+          .reject{|r| r.blank?}
       end
 
       # its an array of ids when #to_i => #to_s yields the same
@@ -190,6 +191,6 @@ module Wordpress
       else
         assign_category_names category_list
       end
-    end  
+    end
   end
 end
