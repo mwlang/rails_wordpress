@@ -9,7 +9,7 @@
 # | count            | bigint(20)          | NO   |     | 0       |                |
 # +------------------+---------------------+------+-----+---------+----------------+
 module Wordpress
-  class Taxonomy < ActiveRecord::Base
+  class Taxonomy < WpBase
     self.table_name = "wp_term_taxonomy"
     self.primary_key = "term_taxonomy_id"
     self.inheritance_column = 'taxonomy'

@@ -1,5 +1,5 @@
 module Wordpress
-  class WpPostmeta < ActiveRecord::Base
+  class WpPostmeta < WpBase
     self.table_name = 'wp_postmeta'
 
     belongs_to :post

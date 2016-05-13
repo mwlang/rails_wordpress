@@ -1,5 +1,5 @@
 module Wordpress
-  class WpPost < ActiveRecord::Base
+  class WpPost < WpBase
     self.table_name = 'wp_posts'
     self.inheritance_column = 'post_type'
 

@@ -6,7 +6,7 @@
 # | term_order       | int(11)             | NO   |     | 0       |       |
 # +------------------+---------------------+------+-----+---------+-------+
 module Wordpress
-  class Relationship < ActiveRecord::Base
+  class Relationship < WpBase
     self.table_name = "wp_term_relationships"
     self.primary_key = nil
     after_save :increment_term_use_count
