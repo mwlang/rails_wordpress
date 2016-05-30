@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rails_wordpress (0.0.5)
+    rails_wordpress (0.0.6)
       rails (~> 4.2)
 
 GEM
