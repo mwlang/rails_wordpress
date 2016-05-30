@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rails_wordpress (0.0.4)
+    rails_wordpress (0.0.5)
       rails (~> 4.2)
 
 GEM
@@ -90,9 +90,9 @@ GEM
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
     method_source (0.8.2)
-    mime-types (3.0)
+    mime-types (3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2016.0221)
+    mime-types-data (3.2016.0521)
     mini_portile (0.6.2)
     minitest (5.5.1)
     multi_json (1.11.0)
