@@ -5,17 +5,17 @@ module Wordpress
     let(:user) { create :post_author }
     let(:post1) { create :post }
     let(:post2) { create :post }
-    
-    it "can instantiate" do 
-      expect(user.user_login).to eq "snoopy"
+
+    it "can instantiate" do
+      expect(user.user_login).to eq "LOGIN"
     end
-    
-    it "has an author for a post" do 
+
+    it "has an author for a post" do
       user
       expect(post1.author).to eq user
     end
-    
-    it "has many posts for the user" do 
+
+    it "has many posts for the user" do
       user
       post1
       post2

@@ -16,7 +16,7 @@ module Wordpress
     has_many :relationships, foreign_key: "object_id"
     has_many :tags, class_name: "PostTag", through: :relationships, source: :taxonomy, :dependent => :destroy
     has_many :categories, class_name: "Category", through: :relationships, source: :taxonomy, :dependent => :destroy
-    has_many :wp_postmetas, class_name: "WpPostmeta", foreign_key: "post_id"
+    has_many :metas, class_name: "Postmeta", foreign_key: "post_id"
 
     belongs_to :author, class_name: "User", foreign_key: "post_author"
 
