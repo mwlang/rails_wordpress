@@ -1,7 +1,5 @@
 module Wordpress
   class Attachment < WpPost
-    def default_mime_type
-      'image/png'
-    end
+    has_many :metas, class_name: "Attachmentmeta", foreign_key: "post_id"
   end
 end
