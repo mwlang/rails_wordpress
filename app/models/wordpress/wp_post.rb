@@ -8,7 +8,7 @@ module Wordpress
     after_save :save_relationships
 
     scope :published, -> { where(post_status: "publish") }
-    scope :descending, -> { order(post_modified: :desc, id: :desc) }
+    scope :descending, -> { where("post_name NOT LIKE '%autosave%'").order(post_modified: :desc, id: :desc) }
     scope :recent, -> (count = 10) { descending.limit(count) }
 
     belongs_to :parent, class_name: "Post", foreign_key: "post_parent"
