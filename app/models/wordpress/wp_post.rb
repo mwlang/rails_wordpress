@@ -11,7 +11,7 @@ module Wordpress
     scope :descending, -> { order(post_modified: :desc, id: :desc) }
     scope :recent, -> (count = 10) { descending.limit(count) }
 
-    belongs_to :parent, class_name: "Post", foreign_key: "post_parent"
+    belongs_to :parent, class_name: "Post", foreign_key: "post_parent", optional: true
 
     has_many :relationships, foreign_key: "object_id"
     has_many :tags, class_name: "PostTag", through: :relationships, source: :taxonomy, :dependent => :destroy

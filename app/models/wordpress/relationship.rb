@@ -12,7 +12,7 @@ module Wordpress
     after_save :increment_term_use_count
     before_destroy :decrement_term_use_count
 
-    belongs_to :post, class_name: "Wordpress::Post", foreign_key: "object_id"
+    belongs_to :post, class_name: "Wordpress::Post", foreign_key: "object_id", optional: true
     belongs_to :taxonomy, class_name: "Wordpress::Taxonomy", foreign_key: "term_taxonomy_id"
 
     def increment_term_use_count
