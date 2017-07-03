@@ -3,11 +3,15 @@
 [![Code Climate](https://codeclimate.com/github/mwlang/rails_wordpress/badges/gpa.svg)](https://codeclimate.com/github/mwlang/rails_wordpress)
 [![Test Coverage](https://codeclimate.com/github/mwlang/rails_wordpress/badges/coverage.svg)](https://codeclimate.com/github/mwlang/rails_wordpress)
 
+(code climate and test coverage out of date at the moment until updated to latest API)
+
 This is a Wordpress Engine for Rails 4.x.  It provides ActiveRecord models that directly utilize Wordpress' tables.  The model classes have been named for the most part according to typical Rails naming convention and model the actual underlying Wordpress concepts.  For example, wp_posts contains posts, pages, attachments, revisions, links, and many other meta types.  This engine models the most common ones: Wordpress::Post, Wordpress::Page, Wordpress::Revision, etc..
 
 ### Project Status
 
-The current state of this project is ALPHA and not everything is modeled, but there is solid implementation for posts, revisions, categories, and tags that will allow you to rapidly build a Rails-based blog or view on an active Wordpress site that you have access to the database.  
+The current state of this project is BETA and not everything is modeled, but there is solid implementation for posts, revisions, categories, and tags that will allow you to rapidly build a Rails-based blog or view on an active Wordpress site that you have access to the database.  
+
+Rails >= 4.2 is supported. (it may work as-is with Rails 4.0 and later, but not tested.  Please submit PR if you confirm operability with earlier Rails versions)
 
 This engine is a direct tie-in to the Wordpress database with functionality reverse-engineered via ActiveRecord models.  
 
@@ -19,13 +23,13 @@ This Engine was developed and tested with Rails 4.2, but should work for all 4.x
 
 ## How to Use
 
-In your Rails Gemfile add the gem: 
+In your Rails Gemfile add the gem:
 
 ```
 gem 'rails_wordpress'
 ```
 
-and then: 
+and then:
 
 ```
 bundle install
@@ -112,7 +116,7 @@ Remember that Wordpress::Revision often contains newer data than Wordpress::Post
 
 * @post.content => self.latest_revision.post_content or self.post_content
 * @post.excerpt => self.latest_revision.post_excerpt or self.post_excerpt
-* @post.title => self.latest_revision.post_title or self.post_title 
+* @post.title => self.latest_revision.post_title or self.post_title
 * @post.updated_at => latest_revision.post_modified
 * @post.created_at => first_revision.post_created
 * @post.post_tags => first_revision.tags
@@ -138,7 +142,7 @@ post = Wordpress::Post.published.first
 post.tag_names # => ["Ruby Language", "Rails"]
 post.post_tags = "Ruby,Rails,Rails 4" # => Creates the new "Rails 4" tag and associates to the post record.
 
-# The following creates a new revision of the post, copying most of the fields, updating others appropriate. 
+# The following creates a new revision of the post, copying most of the fields, updating others appropriate.
 # It also removes the above tags and assigns just "Foobar" tag to the post
 post.new_revision(:post_tags => ["Foobar"]).save!
 ```
@@ -169,7 +173,7 @@ The presence of Revisions complicates checking if a post belongs to specific cat
 ``` ruby
 # continuing above examples...
 post.save!
-post.has_category? foobar_category # => true 
+post.has_category? foobar_category # => true
 
 new_revision = post.new_revision(:post_categories => "Foobar, Foo")
 new_revision.save!
@@ -194,7 +198,7 @@ The Wordpress::Category model has two class-level convenience methods:
 Wordpress::Category#cloud returns a hash of the categories and a bit of math to calculate size/importance of the category (basically number of times a category is assigned to a post relative to number of other category assignments).  For example:
 
 ``` ruby
-Wordpress::Category.cloud 
+Wordpress::Category.cloud
         # => [{:category=>
         #    #<Wordpress::Category:0x007ff349959108
         #     term_taxonomy_id: 75,
@@ -222,8 +226,8 @@ An HAML example for rendering the Category cloud:
 
 ``` haml
 %h2 Categories
-- Wordpress::Category.cloud.each do |t| 
-  = link_to t[:category].name, category_path(t[:category]), style: "font-size: #{t[:size]}em" 
+- Wordpress::Category.cloud.each do |t|
+  = link_to t[:category].name, category_path(t[:category]), style: "font-size: #{t[:size]}em"
   %br
 ```
 
@@ -247,7 +251,7 @@ You can also recursively navigate through sub_categories like so:
 
     %label Categories
     = render 'categories', categories: Wordpress::Category.all
-    
+
     = f.submit 'Save', class: "btn"
 ```
 
@@ -277,7 +281,7 @@ An HAML example for rendering Tag cloud:
 
 NOTE: post_path, tag_path, category_path, etc. all must be appropriately defined in your config/routes.rb file.
 
-### Wordpress::Taxonomy 
+### Wordpress::Taxonomy
 
 The Wordpress::Taxonomy class provides a way to easily traverse the Wordpress taxonomy infrastructure.  It is primarily used internally and as the parent class of the Wordpress::PostTag, Wordpress::Category, and Wordpress::LinkCategory classes.  However, it can be potentially useful within your Rails project as a means of finding all posts that any particular taxonomical term is associated with.
 
@@ -316,7 +320,7 @@ Wordpress::Post.class_eval do
   def has_revisions?
     !revisions.empty?
   end
-  
+
   def tagged
     self.tags.map(&:name).join(",")
   end
