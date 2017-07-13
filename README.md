@@ -35,6 +35,33 @@ and then:
 bundle install
 ```
 
+If you're attempting to connect to Wordpress tables with a different prefix other than "wp_" (e.g. "foo_posts" instead of "wp_posts"), then you can
+specify a prefix in your project's config/database.yml like so:
+
+```yaml
+default: &default
+  adapter: mysql2
+  username: root
+  prefix: foo
+
+development:
+  <<: *default
+  database: wp_development
+
+test:
+  <<: *default
+  database: wp_test
+  prefix: wp
+
+production:
+  <<: *default
+  database: wp_production
+```
+
+In the above example, "foo_posts", "foo_taxonomy", etc. is expected for development and production, but "wp_posts", "wp_taxonomy", etc. for test environment.
+
+NOTE: Normally, you should not include trailing underscore in the database.yml file as you'll end up with "foo__posts", etc. for your table names.
+
 ## ActiveRecord Models
 
 The following ActiveRecord models are available via this Engine:

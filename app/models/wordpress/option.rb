@@ -8,7 +8,7 @@
 # +--------------+---------------------+------+-----+---------+----------------+
 module Wordpress
   class Option < WpBase
-    self.table_name = "wp_options"
+    self.table_name = self.prefix_table_name("options")
     self.primary_key = 'option_id'
   end
 end

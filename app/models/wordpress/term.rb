@@ -8,10 +8,10 @@
 # +------------+---------------------+------+-----+---------+----------------+
 module Wordpress
   class Term < WpBase
-    self.table_name = "wp_terms"
+    self.table_name = self.prefix_table_name("terms")
     before_save :set_slug_value
     validates :slug, uniqueness: true
-    
+
     def set_slug_value
       self.slug = self.name.parameterize
     end

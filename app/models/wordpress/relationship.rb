@@ -7,7 +7,7 @@
 # +------------------+---------------------+------+-----+---------+-------+
 module Wordpress
   class Relationship < WpBase
-    self.table_name = "wp_term_relationships"
+    self.table_name = self.prefix_table_name("term_relationships")
     self.primary_key = nil
     after_save :increment_term_use_count
     before_destroy :decrement_term_use_count

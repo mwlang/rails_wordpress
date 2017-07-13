@@ -1,6 +1,6 @@
 module Wordpress
   class WpPost < WpBase
-    self.table_name = 'wp_posts'
+    self.table_name = self.prefix_table_name('posts')
     self.inheritance_column = 'post_type'
 
     before_create :set_defaults
