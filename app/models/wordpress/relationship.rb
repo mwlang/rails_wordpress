@@ -12,8 +12,8 @@ module Wordpress
     after_save :increment_term_use_count
     before_destroy :decrement_term_use_count
 
-    belongs_to :post, class_name: "Wordpress::Post", foreign_key: "object_id"
-    belongs_to :taxonomy, class_name: "Wordpress::Taxonomy", foreign_key: "term_taxonomy_id"
+    belongs_to :post, class_name: "Wordpress::Post", foreign_key: "object_id", optional: true
+    belongs_to :taxonomy, class_name: "Wordpress::Taxonomy", foreign_key: "term_taxonomy_id", optional: true
 
     def increment_term_use_count
       self.taxonomy.update_attribute(:count, self.taxonomy.count + 1) if self.taxonomy.present?
