@@ -83,6 +83,15 @@ module Wordpress
         expect(post.post_categories).to eq "Foo,Bar"
       end
     end
-    
+
+    context "without parent" do
+      let(:post) { build(:post) }
+
+      it "is valid and can be saved" do
+        expect(post.post_parent).to eq 0
+        expect(post.parent).to be_nil
+        expect(post.save).to eq true
+      end
+    end
   end
 end
