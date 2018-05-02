@@ -11,14 +11,14 @@ module Wordpress
     scope :descending, -> { order(post_modified: :desc, id: :desc) }
     scope :recent, -> (count = 10) { descending.limit(count) }
 
-    belongs_to :parent, class_name: "Post", foreign_key: "post_parent"
+    belongs_to :parent, class_name: "Post", foreign_key: "post_parent", optional: true
 
     has_many :relationships, foreign_key: "object_id"
     has_many :tags, class_name: "PostTag", through: :relationships, source: :taxonomy, :dependent => :destroy
     has_many :categories, class_name: "Category", through: :relationships, source: :taxonomy, :dependent => :destroy
     has_many :metas, class_name: "Postmeta", foreign_key: "post_id"
 
-    belongs_to :author, class_name: "User", foreign_key: "post_author"
+    belongs_to :author, class_name: "User", foreign_key: "post_author", optional: true
 
     def self.find_sti_class type_name
       "wordpress/#{type_name}".camelize.constantize
